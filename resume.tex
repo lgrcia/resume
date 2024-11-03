@@ -1,0 +1,271 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{scalerel} % for flexible scaling
+\usepackage{hyperref} % for clickable links
+\usepackage{etaremune}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% header and footer
+\pagestyle{fancy}
+\fancyhead[L]{\textcolor{gray}{Lionel Garcia, curriculum vitae}}
+\fancyhead[R]{\textcolor{gray}{page \thepage{} of \pageref*{LastPage}}}
+\fancyfoot[C]{}
+\renewcommand{\headrulewidth}{0pt} % No line in header
+\renewcommand{\footrulewidth}{0pt}
+
+% Set itemize style
+\setlist[itemize]{
+    label=\scalebox{0.0}{\textbullet},
+    left=0.0cm,
+    itemsep=0.0em
+}
+
+% change enumerate style
+\renewcommand{\labelenumi}{\color{lightgray}\theenumi.}
+\setlength{\leftmargini}{20pt}
+
+% change hyperref style with url color from an xcolor
+\definecolor{myblue}{RGB}{54, 146, 199}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=myblue,
+}
+
+% commands for journal abbreviations
+\newcommand{\publi}[4]{\item #1 - #3, #2, #4}
+\newcommand{\aj}{AJ}
+\newcommand{\mnras}{MNRAS}
+\newcommand{\aap}{A\&A}
+\newcommand{\procspie}{Proc. SPIE}
+\newcommand{\baas}{Bulletin of the AAS}
+\newcommand{\pasp}{PASP}
+
+% change section and subsection font size
+\titleformat{\section}
+{\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\fontsize{10}{13}\bfseries}{\thesection}{1em}{}
+
+\begin{document}
+\thispagestyle{empty}
+\noindent
+\setlength{\tabcolsep}{0em}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
+    \noindent\textbf{\LARGE Lionel Garcia} & \today \\
+    \\
+    mail - \href{mailto:lgarcia@flatironinstitute.org}{\texttt{lgarcia@flatironinstitute.org}}\\
+    website - \href{https://lgrcia.github.io/}{\texttt{lgrcia.github.io}} \\
+    github - \href{https://github.com/lgrcia}{\texttt{lgrcia}} \\
+\end{tabular*}
+
+
+\section*{Education}
+\begin{itemize}
+    \item PhD 2023 - Astronomy, University of Liège, Belgium
+    \item Msc 2017 - Computer Science, University of Bordeaux, France
+    \item Msc 2017 - Optical Engineering, Institut d'Optique, France
+    \item Bs, 2014 - Physics, University of Paris-Sud, France
+\end{itemize}
+\section*{Positions}
+\begin{itemize}
+    \item Research Fellow - CCA, Flatiron Institute, New York, USA (2023 - now)
+    \item Teaching Assistant - University of Liège, Belgium (2019 - 2021)
+    \item Young Graduate Trainee - European Space Agency, Netherlands (2017 - 2018)
+    \item Technical Student - CERN, Switzerland (2016 - 2017)
+\end{itemize}
+\section*{Teaching \small{at University of Liège}}
+\begin{itemize}
+    \item Classical Mechanics - Undergraduate
+    \item Mathematical Modeling for the Environment - Graduate
+    \item Astronomical Observations - Graduate
+\end{itemize}
+\section*{Grants \& Proposals}
+\begin{itemize}
+    \item 2024 - (PI) JWST General Observer program \href{https://www.stsci.edu/jwst/science-execution/program-information?id=5799}{5799}, 22 hours, 205,000 USD
+    \item 2024 - (co-I) JWST Archival Research program \href{https://www.stsci.edu/jwst/science-execution/program-information?id=5370}{5370}, PI Benjamin Rackham, TBD USD
+    \item 2023 - Flatiron Research Fellowship, Simons Foundation, 210,000 USD
+    \item 2023 - (co-I) HST Archival Legacy program \href{https://www.stsci.edu/cgi-bin/get-proposal-info?id=17551&observatory=HST}{17551}, PI Benjamin Rackham, 530,000 USD
+    \item 2021 - FRIA Doctoral scholarship, FRS–FNRS, 65,000 EURO
+\end{itemize}
+\section*{Talks \& Workshops}
+\begin{itemize}
+    \item Dec. 2024 - Workshop Instructor of PySnacks 7, IAA-CSIC, Granada, Spain
+    \item Jul. 2024 - Talk at TESS Science Conference III, Cambridge, USA
+    \item Jun. 2024 - Seminar at University of Oxford, UK
+    \item Oct. 2023 - Seminar at TESS Team Meeting, Cambridge, USA
+    \item Oct. 2023 - Seminar at EAPS/MIT, Cambridge, USA
+    \item May 2023 - Seminar at IRAP, Toulouse, France
+    \item May 2023 - Seminar at Observatoire de la Côte d'Azur, Nice, France
+    \item May 2023 - Seminar at European Space Agency, Noordwijk, Netherlands
+    \item May 2023 - Seminar at ETH, Zurich, Switzerland
+    \item Mar. 2023 - Seminar for VAST, online
+    \item Mar. 2023 - Talk at EMAC Workshop (NASA), online
+    \item Dec. 2022 - Talk at ESO Belgian Day, Brussels, Belgium
+    \item Jul. 2022 - Talk at NAM 2020, Warwick, UK
+    \item May 2022 - Talk at Exoplanet IV, Las Vegas, USA
+    \item May 2020 - Talk at SAG21 symposium (NASA), online
+    \item Jun. 2019 - Poster at TRAPPIST-1 conference, Liège, Belgium
+\end{itemize}
+\section*{Software}
+\begin{itemize}
+    \item \textsf{\href{https://github.com/lgrcia/spotter}{spotter}}: approximate fluxes and spectra of non-uniform stars
+    \item \textsf{\href{https://github.com/exoplanet-dev/jaxoplanet}{jaxoplanet}}: analytical models of stellar light curves
+    \item \textsf{\href{https://github.com/lgrcia/nuance}{nuance}}: efficient detection of planets transiting active stars
+    \item \textsf{\href{https://github.com/lgrcia/prose}{prose}}: modular image processing pipelines for Astronomy
+    \item \textsf{\href{https://github.com/lgrcia/twirl}{twirl}}: local astrometric plate solving in Python 
+\end{itemize}
+\section*{Publications}
+\subsection*{First author}
+
+\begin{etaremune}
+\publi{2024}{\textsf{jaxoplanet}: Hardware-Accelerated Orbits and Stellar Light Curves}
+{Garcia, L.~J., Hattori, S., Foreman-Mackey, D.}
+{\href{https://raw.githubusercontent.com/lgrcia/paper-jaxoplanet/main/latex/jaxoplanet_draft_20241017.pdf}{In prep.}}
+
+
+\publi{2024}{\textsf{nuance}: Efficient Detection of Planets Transiting Active Stars}
+{Garcia, L.~J., Foreman-Mackey, D., Murray, C.~A., et al.}
+{\href{https://ui.adsabs.harvard.edu/abs/2024AJ....167..284G}{\aj, 167, 284}}
+
+\publi{2022}{HST/WFC3 transmission spectroscopy of the cold rocky planet TRAPPIST-1h}
+{Garcia L.~J., Moran, S.~E., Rackham, B.~V., et al.}
+{\href{https://ui.adsabs.harvard.edu/abs/2022A\&A...665A..19G}{\aap, 665, A19}}
+
+\publi{2022}{\textsf{prose}: a Python framework for modular astronomical images processing}
+{Garcia L.~J., Timmermans, Mathilde, Pozuelos, Francisco J. et al.}
+{\href{https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.4817G/exportcitation}{MNRAS 509 4817-4828}}
+
+\publi{2018}{Validation of a CCD cosmic ray event simulator against Gaia in-orbit data}
+{Garcia L., Prod'homme T., Lucsanyi D. et al.}
+{\href{http://doi.org/10.1117/12.2314090}{Proc. SPIE 10709}}
+
+\end{etaremune}
+\subsection*{Co-author}
+\begin{etaremune}
+    \publi{2024}{Infrared photometry with InGaAs detectors: First light with SPECULOOS}
+    {Pedersen, P.~P., Queloz, D., Garcia, L., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2024arXiv241022140P}{arXiv e-prints, arXiv:2410.22140}}
+
+    \publi{2024}{An extended low-density atmosphere around the Jupiter-sized planet WASP-193 b}
+    {Barkaoui, K., Pozuelos, F.~J., Hellier, C., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2024NatAs...8..909B}{Nature Astronomy, 8, 909}}
+    
+    \publi{2024}{A roadmap for the atmospheric characterization of terrestrial exoplanets with JWST}
+    {TRAPPIST-1 JWST Community Initiative, de Wit, J., Doyon, R., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2024NatAs...8..810T}{Nature Astronomy, 8, 810}}
+    
+    \publi{2024}{CHEOPS in-flight performance. A comprehensive look at the first 3.5 yr of operations}
+    {Fortier, A., Simon, A.~E., Broeg, C., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2024A\&A...687A.302F}{\aap, 687, A302}}
+    
+    \publi{2024}{TOI-4336 A b: A temperate sub-Neptune ripe for atmospheric characterization in a nearby triple M-dwarf system}
+    {Timmermans, M., Dransfield, G., Gillon, M., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2024A\&A...687A..48T}{\aap, 687, A48}}
+    
+    \publi{2024}{Coriolis darkening in late-type stars. II. Effect of self-sustained magnetic fields in stratified convective envelopes}
+    {Pin{\c{c}}on, C., Petitdemange, L., Raynaud, R., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2024A\&A...685A.129P}{\aap, 685, A129}}
+    
+    \publi{2024}{A 1.55 R$_{{\ensuremath{\oplus}}}$ habitable-zone planet hosted by TOI-715, an M4 star near the ecliptic South Pole}
+    {Dransfield, G., Timmermans, M., Triaud, A.~H.~M.~J., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2024MNRAS.527...35D}{\mnras, 527, 35}}
+    
+    \publi{2023}{An M dwarf accompanied by a close-in giant orbiter with SPECULOOS}
+    {Triaud, A.~H.~M.~J., Dransfield, G., Kagetani, T., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.525L..98T}{\mnras, 525, L98}}
+    
+    \publi{2023}{TOI-2084 b and TOI-4184 b: Two new sub-Neptunes around M dwarf stars}
+    {Barkaoui, K., Timmermans, M., Soubkiou, A., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2023A\&A...677A..38B}{\aap, 677, A38}}
+    
+    \publi{2023}{TESS discovery of a super-Earth orbiting the M-dwarf star TOI-1680}
+    {Ghachoui, M., Soubkiou, A., Wells, R.~D., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2023A\&A...677A..31G}{\aap, 677, A31}}
+    
+    \publi{2024}{An extended low-density atmosphere around the Jupiter-sized planet WASP-193 b}
+    {Barkaoui, K., Pozuelos, F.~J., Hellier, C., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2024NatAs...8..909B}{Nature Astronomy, 8, 909}}
+        
+    \publi{2023}{TOI-1442 b and TOI-2445 b: Two potentially rocky ultra-short period planets around M dwarfs}
+    {Morello, G., Parviainen, H., Murgas, F., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2023A\&A...673A..32M}{\aap, 673, A32}}
+    
+    \publi{2023}{A super-Earth and a mini-Neptune near the 2:1 MMR straddling the radius valley around the nearby mid-M dwarf TOI-2096}
+    {Pozuelos, F.~J., Timmermans, M., Rackham, B.~V., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2023A\&A...672A..70P}{\aap, 672, A70}}
+    
+    \publi{2023}{Precise near-infrared photometry, accounting for precipitable water vapour at SPECULOOS Southern Observatory}
+    {Pedersen, P.~P., Murray, C.~A., Queloz, D., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.518.2661P}{\mnras, 518, 2661}}
+    
+    \publi{2022}{Two temperate super-Earths transiting a nearby late-type M dwarf}
+    {Delrez, L., Murray, C.~A., Pozuelos, F.~J., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2022A\&A...667A..59D}{\aap, 667, A59}}
+    
+    \publi{2022}{SPECULOOS Northern Observatory: Searching for Red Worlds in the Northern Skies}
+    {Burdanov, A.~Y., de Wit, J., Gillon, M., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2022PASP..134j5001B}{\pasp, 134, 105001}}
+    
+    \publi{2022}{TESS discovery of a sub-Neptune orbiting a mid-M dwarf TOI-2136}
+    {Gan, T., Soubkiou, A., Wang, S.~X., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.4120G}{\mnras, 514, 4120}}
+    
+    \publi{2022}{Observation scheduling and automatic data reduction for the Antarctic Telescope, ASTEP+}
+    {Dransfield, G., M{\'e}karnia, D., Triaud, A.~H.~M.~J., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2022SPIE12186E..1FD}{\procspie, 12186, 121861F}}
+    
+    \publi{2022}{A study of flares in the ultra-cool regime from SPECULOOS-South}
+    {Murray, C.~A., Queloz, D., Gillon, M., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.2615M}{\mnras, 513, 2615}}
+    
+    \publi{2022}{Complex Modulation of Rapidly Rotating Young M Dwarfs: Adding Pieces to the Puzzle}
+    {G{\"u}nther, M.~N., Berardo, D.~A., Ducrot, E., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2022AJ....163..144G}{\aj, 163, 144}}
+    
+    \publi{2023}{TOI-1442 b and TOI-2445 b: Two potentially rocky ultra-short period planets around M dwarfs}
+    {Morello, G., Parviainen, H., Murgas, F., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2023A\&A...673A..32M}{\aap, 673, A32}}
+        
+    \publi{2022}{TOI-2257 b: A highly eccentric long-period sub-Neptune transiting a nearby M dwarf}
+    {Schanche, N., Pozuelos, F.~J., G{\"u}nther, M.~N., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2022A\&A...657A..45S}{\aap, 657, A45}}
+    
+    \publi{2021}{A large sub-Neptune transiting the thick-disk M4 V TOI-2406}
+    {Wells, R.~D., Rackham, B.~V., Schanche, N., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2021A\&A...653A..97W}{\aap, 653, A97}}
+    
+    \publi{2021}{Six transiting planets and a chain of Laplace resonances in TOI-178}
+    {Leleu, A., Alibert, Y., Hara, N.~C., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2021A\&A...649A..26L}{\aap, 649, A26}}
+    
+    \publi{2021}{SPECULOOS: Ultracool dwarf transit survey. Target list and strategy}
+    {Sebastian, D., Gillon, M., Ducrot, E., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2021A\&A...645A.100S}{\aap, 645, A100}}
+    
+    \publi{2020}{Development of the SPECULOOS exoplanet search project}
+    {Sebastian, D., Pedersen, P.~P., Murray, C.~A., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2020SPIE11445E..21S}{\procspie, 11445, 1144521}}
+    
+    \publi{2020}{{\ensuremath{\pi}} Earth: A 3.14 day Earth-sized Planet from K2's Kitchen Served Warm by the SPECULOOS Team}
+    {Niraula, P., Wit, J. de ., Rackham, B.~V., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2020AJ....160..172N}{\aj, 160, 172}}
+    
+    \publi{2020}{A super-Earth and a sub-Neptune orbiting the bright, quiet M3 dwarf TOI-1266}
+    {Demory, B.-O., Pozuelos, F.~J., G{\'o}mez Maqueo Chew, Y., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2020A\&A...642A..49D}{\aap, 642, A49}}
+    
+    \publi{2020}{GJ 273: on the formation, dynamical evolution, and habitability of a planetary system hosted by an M dwarf at 3.75 parsec}
+    {Pozuelos, F.~J., Su{\'a}rez, J.~C., de El{\'\i}a, G.~C., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2020A\&A...641A..23P}{\aap, 641, A23}}
+    
+    \publi{2020}{Photometry and performance of SPECULOOS-South}
+    {Murray, C.~A., Delrez, L., Pedersen, P.~P., et al.}
+    {\href{https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.2446M}{\mnras, 495, 2446}}
+\end{etaremune}
+\end{document}
